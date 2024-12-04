@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Break Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+	    <img src="https://www.leekie.com/img/compname1.gif" alt="Leekie Enterprises Inc." >
+            <div class="running-text">⏲GOCO BREAK TIMER⏲</div>
+        </div>
+        <label for="name">Employee Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+        
+        <label for="break-time">Desired Break Time (minutes):</label>
+        <input type="number" id="break-time" placeholder="Minutes" min="0" required>
+        <label for="total-duration">Time Consumed:</label>
+        <input type="text" id="total-duration" readonly />
+        <div id="duration-notification" style="color: red; display: none;">Total break time exceeded 65 minutes!</div>
+
+        <button id="start-break" onclick="startBreak()">Start Break</button>
+        <button id="end-break" onclick="endBreak()" disabled>End Break</button>
+        <div id="break-status"></div>
+        <div id="break-history"></div>
+
+       
+    </div>
+    <script src="script.js"></script>
+</body>
+
